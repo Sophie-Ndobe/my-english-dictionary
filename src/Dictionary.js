@@ -1,12 +1,24 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 export default function Dictionary() {
+  let [word, setWord] = useState(" ");
+
+  function displayResults(response) {
+    console.log(response);
+  }
+
   function handleSubmitForm(event) {
     event.preventDefault();
+
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(apiUrl).then(displayResults);
   }
+
   function handleChange(event) {
-    alert(event.target.value);
+    setWord(event.target.value);
   }
+
   return (
     <div className="Dictionary">
       <h2>This is the dictionary component</h2>
