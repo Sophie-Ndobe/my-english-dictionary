@@ -25,10 +25,13 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <section>
-        <h2>This is the dictionary component</h2>
+        <h2>Which word would you like to search for?</h2>
         <form onSubmit={handleSubmitForm}>
           <input type="search" onChange={handleChange} />
         </form>
+        <div className="Suggestion">
+          suggested word: time, life, flower, travel
+        </div>
       </section>
 
       <SearchResults results={results} />

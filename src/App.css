@@ -1,8 +1,9 @@
 .App {
-  color: #121212;
+  max-width: 900px;
+  margin: 10px auto;
 }
 
 .App h1 {
-  color: white;
+  color: #050301;
   font-weight: 700;
 }

@@ -3,4 +3,29 @@
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Dictionary h2 {
+  color: #050301;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.Dictionary input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(163, 159, 159);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Dictionary .Suggestion {
+  color: #050301;
+  opacity: 0.5;
+  line-height: 1.5;
+  font-style: italic;
+  font-size: 13px;
+  margin-top: 6px;
 }

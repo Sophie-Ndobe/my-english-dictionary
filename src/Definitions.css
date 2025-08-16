@@ -1,0 +1,9 @@
+.Definitions p {
+  color: #060606;
+  line-height: 1.5;
+}
+
+.Definitions .Example {
+  font-style: italic;
+  opacity: 0.8;
+}

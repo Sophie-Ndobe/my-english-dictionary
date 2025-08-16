@@ -1,5 +1,6 @@
 import React from "react";
 import Meanings from "./Meanings";
+import "./SearchResults.css";
 
 export default function SearchResults(props) {
   //console.log(props.results);
