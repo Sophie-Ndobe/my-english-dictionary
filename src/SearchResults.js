@@ -4,7 +4,7 @@ import Phonetics from "./Phonetics";
 import "./SearchResults.css";
 
 export default function SearchResults(props) {
-  console.log(props.results);
+  //console.log(props.results);
 
   if (props.results) {
     return (
@@ -14,12 +14,12 @@ export default function SearchResults(props) {
             <div className="col-2">
               <Phonetics phoneticsUrl={props.results[0]} />
             </div>
-            <div className="col-10">
+            <div className="col-10 p-0">
               <h3>{props.results[0].word}</h3>
             </div>
           </div>
 
-          <div>{props.results[0].phonetic}</div>
+          <div className="PhoneticText">{props.results[0].phonetic}</div>
         </section>
         {props.results[0].meanings.map(function (meaning, index) {
           return (

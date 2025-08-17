@@ -1,5 +1,12 @@
 .Phonetics .AudioButton {
   font-size: 50px;
+  border: none;
+  background-color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.Phonetics .AudioButton:hover {
+  transform: scale(0.9);
 }
 
 .Phonetics a {
