@@ -1,3 +1,7 @@
 .Phonetics .AudioButton {
   font-size: 50px;
 }
+
+.Phonetics a {
+  text-decoration: none;
+}

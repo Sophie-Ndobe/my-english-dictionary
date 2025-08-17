@@ -5,13 +5,14 @@ import "./SearchResults.css";
 
 export default function SearchResults(props) {
   console.log(props.results);
+
   if (props.results) {
     return (
       <div className="SearchResults">
         <section>
           <div className="row">
             <div className="col-2">
-              <Phonetics />
+              <Phonetics phoneticsUrl={props.results[0]} />
             </div>
             <div className="col-10">
               <h3>{props.results[0].word}</h3>
