@@ -23,9 +23,9 @@
 
 .Dictionary .Suggestion {
   color: #050301;
-  opacity: 0.5;
+  opacity: 0.4;
   line-height: 1.5;
   font-style: italic;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 6px;
 }
