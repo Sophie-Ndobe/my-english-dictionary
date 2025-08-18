@@ -8,3 +8,13 @@
   font-weight: 700;
   opacity: 0.7;
 }
+
+.App a {
+  font-weight: 600;
+  font-style: italic;
+  color: #050301;
+}
+
+.App a:hover {
+  color: blue;
+}
