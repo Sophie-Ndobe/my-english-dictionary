@@ -12,3 +12,9 @@
 .Phonetics a {
   text-decoration: none;
 }
+
+@media (max-width: 760px) {
+  .Phonetics .AudioButton {
+    font-size: 40px;
+  }
+}

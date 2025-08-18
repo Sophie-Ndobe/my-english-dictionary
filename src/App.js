@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1 className="text-center">📖📖The English Dictionary📖📖</h1>
-        <Dictionary />
+        <Dictionary defaultWord="deal" />
         <footer className="text-center">
           This project was developed by{" "}
           <a

@@ -4,10 +4,11 @@ import SearchResults from "./SearchResults";
 import Images from "./Images";
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  let [word, setWord] = useState(" ");
+export default function Dictionary(props) {
+  let [word, setWord] = useState(props.defaultWord);
   let [results, setResults] = useState(null);
   let [images, setImages] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function displayImages(response) {
     setImages(response.data.photos);
@@ -17,10 +18,9 @@ export default function Dictionary() {
     setResults(response.data);
   }
 
-  function handleSubmitForm(event) {
-    event.preventDefault();
-
+  function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+
     axios.get(apiUrl).then(displayResults);
 
     let pexelApiKey =
@@ -31,25 +31,38 @@ export default function Dictionary() {
     axios.get(pexelApiUrl, { headers: headers }).then(displayImages);
   }
 
+  function handleSubmitForm(event) {
+    event.preventDefault();
+    search();
+  }
+
   function handleChange(event) {
     setWord(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <section>
-        <h2>Which word would you like to search for?</h2>
-        <form onSubmit={handleSubmitForm}>
-          <input type="search" onChange={handleChange} />
-        </form>
-        <div className="Suggestion">
-          suggested word: time, life, flower, travel
-        </div>
-      </section>
+  function load() {
+    setLoaded(true);
+    search();
+  }
 
-      <SearchResults results={results} />
-
-      <Images images={images} />
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <section>
+          <h2>Which word would you like to search for?</h2>
+          <form onSubmit={handleSubmitForm}>
+            <input type="search" onChange={handleChange} />
+          </form>
+          <div className="Suggestion">
+            suggested word: time, life, flower, travel
+          </div>
+        </section>
+        <SearchResults results={results} />
+        <Images images={images} />
+      </div>
+    );
+  } else {
+    load();
+    return "Loading...";
+  }
 }

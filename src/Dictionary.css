@@ -29,3 +29,13 @@
   font-size: 14px;
   margin-top: 6px;
 }
+
+@media (max-width: 760px) {
+  .Dictionary h2 {
+    font-size: 16px;
+  }
+
+  .Dictionary .Suggestion {
+    font-size: 10px;
+  }
+}

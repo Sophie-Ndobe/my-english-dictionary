@@ -4,8 +4,6 @@ import Phonetics from "./Phonetics";
 import "./SearchResults.css";
 
 export default function SearchResults(props) {
-  //console.log(props.results);
-
   if (props.results) {
     return (
       <div className="SearchResults">

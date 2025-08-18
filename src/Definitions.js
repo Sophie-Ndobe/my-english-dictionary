@@ -2,8 +2,6 @@ import React from "react";
 import "./Definitions.css";
 
 export default function Definitions(props) {
-  //console.log(props.definitions);
-
   if (props.definitions) {
     return (
       <div className="Definitions">

@@ -11,3 +11,13 @@
   font-weight: 600;
   opacity: 0.7;
 }
+
+@media (max-width: 760px) {
+  .SearchResults h3 {
+    font-size: 30px;
+  }
+
+  .SearchResults .PhoneticText {
+    font-size: 18px;
+  }
+}

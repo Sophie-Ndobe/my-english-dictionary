@@ -17,3 +17,13 @@
   border-radius: 4px;
   font-weight: 400;
 }
+
+@media (max-width: 760px) {
+  .Definitions p {
+    font-size: 14px;
+  }
+
+  .Definitions li {
+    font-size: 14px;
+  }
+}

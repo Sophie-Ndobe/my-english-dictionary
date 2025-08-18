@@ -9,6 +9,10 @@
   opacity: 0.7;
 }
 
+.App footer {
+  padding-bottom: 20px;
+}
+
 .App a {
   font-weight: 600;
   font-style: italic;
@@ -17,4 +21,14 @@
 
 .App a:hover {
   color: blue;
+}
+
+@media (max-width: 760px) {
+  .App h1 {
+    font-size: 28px;
+  }
+
+  .App footer {
+    font-size: 14px;
+  }
 }
