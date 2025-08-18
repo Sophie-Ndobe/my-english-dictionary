@@ -11,7 +11,13 @@ export default function Definitions(props) {
 
         <p className="Example">{props.definitions.example}</p>
 
-        <p className="text-primary">{props.definitions.synonyms}</p>
+        {props.definitions.synonyms.map(function (synonyms, index) {
+          return (
+            <ul key={index}>
+              <li className="text-primary Synonyms">{synonyms}</li>
+            </ul>
+          );
+        })}
       </div>
     );
   } else {

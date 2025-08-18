@@ -7,3 +7,13 @@
   font-style: italic;
   opacity: 0.7;
 }
+
+.Definitions ul {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 15px;
+  background-color: #dbd7e0;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-weight: 400;
+}

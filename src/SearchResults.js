@@ -17,9 +17,11 @@ export default function SearchResults(props) {
             <div className="col-10 p-0">
               <h3>{props.results[0].word}</h3>
             </div>
+            <div className="col-2"></div>
+            <div className="col-10 p-0">
+              <div className="PhoneticText">{props.results[0].phonetic}</div>
+            </div>
           </div>
-
-          <div className="PhoneticText">{props.results[0].phonetic}</div>
         </section>
         {props.results[0].meanings.map(function (meaning, index) {
           return (
