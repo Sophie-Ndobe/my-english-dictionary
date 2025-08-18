@@ -3,12 +3,17 @@ import ReactAudioPlayer from "react-audio-player";
 import "./Phonetics.css";
 
 export default function Phonetics(props) {
-  console.log(props.phoneticsUrl);
-
   let audioRef = useRef(null);
 
   function handlePlay() {
-    if (audioRef) {
+    const audioSrc = props.phoneticsUrl.phonetics[0].audio;
+
+    if (!audioSrc) {
+      alert("No sound available for this word");
+      return;
+    }
+
+    if (audioRef.current) {
       audioRef.current.audioEl.current.play();
     }
   }
